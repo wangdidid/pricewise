@@ -6,7 +6,7 @@ import Product from "@/lib/models/product.model";
 import { scrapeAmazonProduct } from "@/lib/scraper";
 import { generateEmailBody, sendEmail } from "@/lib/nodemailer";
 
-export const maxDuration = 300; // This function can run for a maximum of 300 seconds
+export const maxDuration = 60; // Serverless Functions must have a maxDuration between 1 and 60 for plan hobby. : https://vercel.com/docs/concepts/limits/overview#serverless-function-execution-timeout
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
